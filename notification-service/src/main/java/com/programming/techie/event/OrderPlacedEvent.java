@@ -1,4 +1,4 @@
-package com.programming.techie;
+package com.programming.techie.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,4 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OrderPlacedEvent {
     private String orderNumber;
+    private String userEmail;
 }

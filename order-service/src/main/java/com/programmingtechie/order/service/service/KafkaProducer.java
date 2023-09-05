@@ -16,7 +16,7 @@ public class KafkaProducer {
     public void sendMessage(OrderPlacedEvent orderPlacedEvent) {
         Message<OrderPlacedEvent> message = MessageBuilder
                 .withPayload(orderPlacedEvent)
-                .setHeader(KafkaHeaders.TOPIC, "notificationTopic")
+                .setHeader(KafkaHeaders.TOPIC, "myTopic")
                 .build();
         kafkaTemplate.send(message);
     }

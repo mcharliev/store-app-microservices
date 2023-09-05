@@ -6,11 +6,9 @@ import com.programmingtechie.order.service.dto.OrderRequest;
 import com.programmingtechie.order.service.event.OrderPlacedEvent;
 import com.programmingtechie.order.service.model.Order;
 import com.programmingtechie.order.service.model.OrderLineItems;
+import com.programmingtechie.order.service.model.User;
 import com.programmingtechie.order.service.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.cloud.sleuth.Span;
-import org.springframework.cloud.sleuth.Tracer;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -25,8 +23,8 @@ import java.util.UUID;
 public class OrderService {
     private final OrderRepository orderRepository;
     private final WebClient.Builder webClientBuilder;
-    private final Tracer tracer;
     private final KafkaProducer kafkaProducer;
+    private final UserService userService;
 
     public String placeOrder(OrderRequest orderRequest) {
         Order order = new Order();
@@ -42,8 +40,6 @@ public class OrderService {
                 .map(OrderLineItems::getSkuCode)
                 .toList();
 
-        Span inventoryServiceLookup = tracer.nextSpan().name("InventoryServiceLookup");
-        try(Tracer.SpanInScope SpanInScope = tracer.withSpan(inventoryServiceLookup.start())){
             //Call to Inventory Service, and place order if product is in stock
             InventoryResponse[] inventoryResponsesArray = webClientBuilder.build().get()
                     .uri("http://inventory-service/api/inventory",
@@ -54,19 +50,18 @@ public class OrderService {
 
             boolean allProductsInStock = Arrays.stream(inventoryResponsesArray)
                     .allMatch(InventoryResponse::isInStock);
-
             if (allProductsInStock) {
                 orderRepository.save(order);
+                User authUser = userService.getUser();
                 OrderPlacedEvent orderPlacedEvent = new OrderPlacedEvent();
                 orderPlacedEvent.setOrderNumber(order.getOrderNumber());
+                orderPlacedEvent.setUserEmail(authUser.getUsername());
                 kafkaProducer.sendMessage(orderPlacedEvent);
                 return "Order placed successfully";
             } else {
                 throw new IllegalArgumentException("Product is not in stock, please try again later");
             }
-        }finally {
-            inventoryServiceLookup.end();
-        }
+
     }
 
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {

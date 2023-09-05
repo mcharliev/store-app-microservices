@@ -5,26 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b503dae2-0260-407e-8614-2de1be631cfd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/KafkaConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/NotificationServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/OrderPlacedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-service/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/event/OrderPlacedEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/service/KafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/config/JavaMailConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/constant/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/service/MailSender.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/controller/AuthController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/controller/HelloController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/controller/advice/ExceptionHandlerAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/exception/ExceptionDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/exception/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/model/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/security/RegistrationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/security/UserEntityDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/security/UserEntityDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/security/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/validator/UserValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/templates/auth/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/templates/auth/registration.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/order-service/src/main/resources/templates/hello.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/22dfe74b-36ee-4990-b964-c105a4e20c8e.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22dfe74b-36ee-4990-b964-c105a4e20c8e.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/22dfe74b-36ee-4990-b964-c105a4e20c8e/storage_v2/_src_/database/orders.5WLfww/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/22dfe74b-36ee-4990-b964-c105a4e20c8e/storage_v2/_src_/database/orders.5WLfww/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inventory-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/discovery-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventory-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/KafkaConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/kafka/KafkaConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/NotificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/java/com/programming/techie/event/OrderPlacedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-service/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/config/KafkaTopicConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/config/KafkaTopicConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/event/OrderPlacedEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/event/OrderPlacedEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/service/KafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/service/KafkaProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/service/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/java/com/programmingtechie/order/service/service/OrderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/order-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +85,7 @@
     "last_opened_file_path": "D:/javaProjects/kafka-tutorial",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "editor.preferences.tabs",
-    "spring.configuration.checksum": "34b79dcbf0dad1b177737a2fd4480264"
+    "spring.configuration.checksum": "7618c35edfe0eef8a4c7272b27c69730"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -81,13 +102,18 @@
       <recent name="com.programming.techie" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\javaProjects\microservices-new\inventory-service" />
-      <recent name="D:\javaProjects\microservices-new\product-service" />
-      <recent name="D:\javaProjects\microservices-new\order-service" />
+      <recent name="D:\javaProjects\microservices-new\order-service\src\main\java\com\programmingtechie\order\service" />
+      <recent name="D:\javaProjects\microservices-new\order-service\src\main\resources" />
+      <recent name="D:\javaProjects\microservices-new\order-service\src\main\java\com\programmingtechie\order\service\security" />
+      <recent name="D:\javaProjects\microservices-new\order-service\src\main\java\com\programmingtechie\order\service\controller" />
+      <recent name="D:\javaProjects\microservices-new\order-service\src\main\resources\templates" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.programming.techie" />
-      <recent name="com.programmingtechie.order.service.dto" />
+      <recent name="com.programming.techie.event" />
+      <recent name="com.programmingtechie.order.service.controller.advice" />
+      <recent name="com.programmingtechie.order.service.service" />
+      <recent name="com.programmingtechie.order.service.repository" />
+      <recent name="com.programmingtechie.order.service.model" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -203,7 +229,11 @@
       <option name="presentableId" value="Default" />
       <updated>1693484322920</updated>
       <workItem from="1693484324358" duration="16590000" />
-      <workItem from="1693560655270" duration="22722000" />
+      <workItem from="1693560655270" duration="22870000" />
+      <workItem from="1693656154975" duration="1384000" />
+      <workItem from="1693661963498" duration="74000" />
+      <workItem from="1693852220987" duration="9641000" />
+      <workItem from="1693914344030" duration="1951000" />
     </task>
     <servers />
   </component>
